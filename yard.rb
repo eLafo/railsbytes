@@ -12,7 +12,6 @@ say "\nInstalling yard..."
 inject_into_file 'Gemfile', after: 'group :development do' do
   <<-RUBY
 
-  # bundler-audit provides patch-level verification for Bundled apps.
   gem "yard"
   RUBY
 end
