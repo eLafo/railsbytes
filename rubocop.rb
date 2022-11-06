@@ -58,4 +58,6 @@ end
 
 run("rubocop --auto-gen-config")
 
+run "bundle binstubs rubocop"
+
 do_commit
