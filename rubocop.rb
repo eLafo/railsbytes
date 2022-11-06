@@ -56,10 +56,6 @@ if yes?("Do you want to run rubocop -a?")
   run("rubocop -a")
 end
 
-if yes?("Do you want to run rubocop --auto-gen-config?")
-  run("rubocop --auto-gen-config")
-end
+run("rubocop --auto-gen-config")
 
-if yes?("Do you want to commit your changes?")
-  do_commit
-end
+do_commit
