@@ -1,4 +1,8 @@
-volumes = []
+def do_commit
+  git :init
+  git add: "."
+  git commit: " -m 'Adds docker-compose for local development' "
+end
 
 config = { "version" => "3.1" }
 
@@ -69,3 +73,5 @@ if yes?("Do you want a mailcatcher service?")
 end
 
 create_file "docker-compose.yml", config.to_yaml
+
+do_commit
